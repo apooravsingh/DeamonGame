@@ -1,0 +1,35 @@
+body {
+}
+
+h3 {
+  text-align: center;
+}
+
+.modal {
+  top: 0;
+  left: 0;
+  opacity: 0;
+  position: absolute;
+  width: 100vw;
+  height: 100vh;
+  background-color: rgba(0, 0, 0, 0.8);
+  z-index: 1;
+  display: none;
+  padding: 20px;
+  transition: all 800ms ease-in;
+}
+
+  .modal p {
+    text-decoration: none;
+    font-size: 21px;
+    cursor: default;
+    width: 1000px;
+    margin-left: auto;
+    margin-right: auto;
+    text-align: center;
+  }
+
+  .modal button {
+    color: white;
+    margin-top: 50px;
+  }
