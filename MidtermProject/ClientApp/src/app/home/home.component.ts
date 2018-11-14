@@ -30,13 +30,14 @@ export class HomeComponent implements OnInit {
   }
 
   roll() {
+    $(".devilDices").empty();
     this.diceService.roll().subscribe(res => {
       this.diceNum = res;
+      $(".dice").css("display", "inline");
       if (this.diceNum !== 1) {
         //Add score
         this.roundScore += this.diceNum;
         $("#current-" + this.activePlayer).text(this.roundScore);
-        $(".dice").css("display", "inline");
       } else {
         // Next player
         this.devilPlay();
@@ -59,18 +60,17 @@ export class HomeComponent implements OnInit {
       console.log(devilDices);
       for (let i = 0; i < devilDices.length; i++) {
         let num = devilDices[i];
+        $(".devilDices").append('<li><img src="https://javpet.github.io/The-Pig-Game/dice-'+num+'.png" width="50px" height="50px"></li><br>');
         if (num !== 1) {
           //Add score
           this.diceNum = num;
           this.roundScore += this.diceNum;
-          setTimeout(() => {
-              $("#current-1").text(this.roundScore);
-              $(".dice").css("display", "inline");
-            }, 1000*i);
           // $("#current-1").text(this.roundScore);
-          // $(".dice").css("display", "inline");
+          // $(".dice").css("display", "inline").fadeIn(1200);
         } else {
           // Next player
+          $(".dice").css("display", "inline");
+
           this.playerPlay();
           return;
         }
@@ -101,13 +101,12 @@ export class HomeComponent implements OnInit {
   }
 
   hold() {
+    $(".devilDices").empty();
     if (this.gamePlaying && this.activePlayer == 0) {
       // Add currentScore to globalScore
       this.scores[this.activePlayer] += this.roundScore;
-
       // Update the UI to show the globalScore
       $("#score-" + this.activePlayer).text(this.scores[this.activePlayer]);
-
       // Check if player won the game
       if (this.scores[this.activePlayer] >= 100) {
         $("#name-" + this.activePlayer).text("Winner!");
