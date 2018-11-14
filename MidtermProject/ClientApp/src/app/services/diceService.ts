@@ -9,8 +9,4 @@ export class DiceService {
   roll() {
     return this.http.get("http://localhost:64120/api/Dice/Roll").map(res => res.json());
   }
-
-  devilRoll(){
-    return this.http.get("http://localhost:64120/api/Dice/DevilRoll").map(res => res.json());
-  }
 }

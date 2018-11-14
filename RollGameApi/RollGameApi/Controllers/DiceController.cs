@@ -18,18 +18,5 @@ namespace RollGameApi.Controllers
             int result = (int)(random.NextDouble() * 6 + 1);
             return new OkObjectResult(result);
         }
-
-        [Route("DevilRoll")]
-        public IActionResult DevilRoll()
-        {
-            List<int> list = new List<int>();
-            Random random = new Random();
-            int count = (int)(random.NextDouble() * 5 + 1);
-            for(int i=0; i < count; i++)
-            {
-                list.Add((int)(random.NextDouble() * 6 + 1));
-            }
-            return new OkObjectResult(list);
-        }
     }
 }
