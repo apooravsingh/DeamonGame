@@ -20,8 +20,6 @@ export class HomeComponent implements OnInit {
     this.scores = [0, 0];
     this.activePlayer = 0;
     this.roundScore = 0;
-    // document.querySelector("#current-" + activePlayer).textContent = dice;
-    $(".dice").css("display", "none");
     $(".player-0-panel").removeClass("active");
     $(".player-1-panel").removeClass("active");
     $(".player-0-panel").removeClass("winner");
@@ -31,15 +29,19 @@ export class HomeComponent implements OnInit {
 
   roll() {
     $(".devilDices").empty();
+    $(".playerDice").empty();
     this.diceService.roll().subscribe(res => {
       this.diceNum = res;
-      $(".dice").css("display", "inline");
+      // $(".dice").css("display", "inline");
+      $(".playerDice").append('<img src="https://javpet.github.io/The-Pig-Game/dice-' + this.diceNum + '.png" width="50px" height="50px" style="box-shadow: 0px 10px 60px rgba(0, 0, 0, 0.10);">');
       if (this.diceNum !== 1) {
         //Add score
         this.roundScore += this.diceNum;
         $("#current-" + this.activePlayer).text(this.roundScore);
       } else {
         // Next player
+        $(".playerDice").empty();    
+        alert("You rolled 1, devil's turn now.");
         this.devilPlay();
       }
     });
@@ -47,6 +49,7 @@ export class HomeComponent implements OnInit {
 
   devilPlay() {
     //Next player with ternary operator
+    // $(".playerDice").empty();
     this.activePlayer == 1;
     this.roundScore = 0;
     $("#current-0").text("0");
@@ -60,17 +63,16 @@ export class HomeComponent implements OnInit {
       console.log(devilDices);
       for (let i = 0; i < devilDices.length; i++) {
         let num = devilDices[i];
-        $(".devilDices").append('<li><img src="https://javpet.github.io/The-Pig-Game/dice-'+num+'.png" width="50px" height="50px"></li><br>');
+        $(".devilDices").append('<img src="https://javpet.github.io/The-Pig-Game/dice-' + num + '.png" width="50px" height="50px" style="box-shadow: 0px 10px 60px rgba(0, 0, 0, 0.10);">&nbsp;');
         if (num !== 1) {
           //Add score
           this.diceNum = num;
           this.roundScore += this.diceNum;
-          // $("#current-1").text(this.roundScore);
-          // $(".dice").css("display", "inline").fadeIn(1200);
         } else {
           // Next player
-          $(".dice").css("display", "inline");
-
+          setTimeout(() => {
+            alert("Devil rolled 1, your turn now.");
+          }, 100);
           this.playerPlay();
           return;
         }
@@ -78,19 +80,25 @@ export class HomeComponent implements OnInit {
       this.scores[1] += this.roundScore;
       $("#score-1").text(this.scores[1]);
       if (this.scores[1] >= 100) {
-        $("#name-1").text("Winner!");
+        $(".btn-roll").hide();
+        $(".btn-hold").hide();
+        $("#name-1").text("Devil win!");
         $(".dice").css("display", "none");
         $(".player-1-panel").addClass("winner");
         $(".player-1-panel").removeClass("active");
         this.gamePlaying = false;
       } else {
-        this.playerPlay()
+        this.playerPlay();
       }
     });
   }
 
   playerPlay() {
     //Next player with ternary operator
+    $(".playerDice").empty();
+    $(".playerDice").append("<h2>Your turn now.</h2>");
+    $(".btn-roll").show();
+    $(".btn-hold").show();
     this.activePlayer = 0;
     this.roundScore = 0;
     $("#current-0").text("0");
@@ -104,15 +112,17 @@ export class HomeComponent implements OnInit {
     $(".devilDices").empty();
     if (this.gamePlaying && this.activePlayer == 0) {
       // Add currentScore to globalScore
-      this.scores[this.activePlayer] += this.roundScore;
+      this.scores[0] += this.roundScore;
       // Update the UI to show the globalScore
-      $("#score-" + this.activePlayer).text(this.scores[this.activePlayer]);
+      $("#score-0").text(this.scores[this.activePlayer]);
       // Check if player won the game
-      if (this.scores[this.activePlayer] >= 100) {
-        $("#name-" + this.activePlayer).text("Winner!");
+      if (this.scores[0] >= 100) {
+        $(".btn-roll").hide();
+        $(".btn-hold").hide();
+        $("#name-" + this.activePlayer).text("You win!");
         $(".dice").css("display", "none");
-        $(".player-" + this.activePlayer + "-panel").addClass("winner");
-        $(".player-" + this.activePlayer + "-panel").removeClass("active");
+        $(".player-0-panel").addClass("winner");
+        $(".player-0-panel").removeClass("active");
         this.gamePlaying = false;
       } else {
         this.devilPlay()
@@ -120,4 +130,11 @@ export class HomeComponent implements OnInit {
     }
   }
 
+  showInfo(){
+    $(".modal").addClass("show");
+  }
+
+  close(){
+     $(".modal").removeClass("show");
+  }
 }
