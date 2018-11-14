@@ -12,3 +12,17 @@ D:\Study\GuoHanwen\Master\Info6250\Assignments\RollGameApi\RollGameApi\obj\Debug
 D:\Study\GuoHanwen\Master\Info6250\Assignments\RollGameApi\RollGameApi\bin\Debug\netcoreapp2.1\RollGameApi.pdb
 D:\Study\GuoHanwen\Master\Info6250\Assignments\RollGameApi\RollGameApi\obj\Debug\netcoreapp2.1\RollGameApi.dll
 D:\Study\GuoHanwen\Master\Info6250\Assignments\RollGameApi\RollGameApi\obj\Debug\netcoreapp2.1\RollGameApi.pdb
+D:\Study\GuoHanwen\Master\DeamonGame\RollGameApi\RollGameApi\bin\Debug\netcoreapp2.1\RollGameApi.deps.json
+D:\Study\GuoHanwen\Master\DeamonGame\RollGameApi\RollGameApi\bin\Debug\netcoreapp2.1\RollGameApi.runtimeconfig.json
+D:\Study\GuoHanwen\Master\DeamonGame\RollGameApi\RollGameApi\bin\Debug\netcoreapp2.1\RollGameApi.runtimeconfig.dev.json
+D:\Study\GuoHanwen\Master\DeamonGame\RollGameApi\RollGameApi\bin\Debug\netcoreapp2.1\RollGameApi.dll
+D:\Study\GuoHanwen\Master\DeamonGame\RollGameApi\RollGameApi\bin\Debug\netcoreapp2.1\RollGameApi.pdb
+D:\Study\GuoHanwen\Master\DeamonGame\RollGameApi\RollGameApi\obj\Debug\netcoreapp2.1\RollGameApi.csprojAssemblyReference.cache
+D:\Study\GuoHanwen\Master\DeamonGame\RollGameApi\RollGameApi\obj\Debug\netcoreapp2.1\RollGameApi.csproj.CoreCompileInputs.cache
+D:\Study\GuoHanwen\Master\DeamonGame\RollGameApi\RollGameApi\obj\Debug\netcoreapp2.1\RollGameApi.RazorAssemblyInfo.cache
+D:\Study\GuoHanwen\Master\DeamonGame\RollGameApi\RollGameApi\obj\Debug\netcoreapp2.1\RollGameApi.RazorAssemblyInfo.cs
+D:\Study\GuoHanwen\Master\DeamonGame\RollGameApi\RollGameApi\obj\Debug\netcoreapp2.1\RollGameApi.AssemblyInfoInputs.cache
+D:\Study\GuoHanwen\Master\DeamonGame\RollGameApi\RollGameApi\obj\Debug\netcoreapp2.1\RollGameApi.AssemblyInfo.cs
+D:\Study\GuoHanwen\Master\DeamonGame\RollGameApi\RollGameApi\obj\Debug\netcoreapp2.1\RollGameApi.RazorTargetAssemblyInfo.cache
+D:\Study\GuoHanwen\Master\DeamonGame\RollGameApi\RollGameApi\obj\Debug\netcoreapp2.1\RollGameApi.dll
+D:\Study\GuoHanwen\Master\DeamonGame\RollGameApi\RollGameApi\obj\Debug\netcoreapp2.1\RollGameApi.pdb

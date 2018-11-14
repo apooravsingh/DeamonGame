@@ -12224,11 +12224,11 @@
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "D:\\Study\\GuoHanwen\\Master\\Info6250\\Assignments\\RollGameApi\\RollGameApi\\RollGameApi.csproj",
+      "projectUniqueName": "D:\\Study\\GuoHanwen\\Master\\DeamonGame\\RollGameApi\\RollGameApi\\RollGameApi.csproj",
       "projectName": "RollGameApi",
-      "projectPath": "D:\\Study\\GuoHanwen\\Master\\Info6250\\Assignments\\RollGameApi\\RollGameApi\\RollGameApi.csproj",
+      "projectPath": "D:\\Study\\GuoHanwen\\Master\\DeamonGame\\RollGameApi\\RollGameApi\\RollGameApi.csproj",
       "packagesPath": "C:\\Users\\andyg\\.nuget\\packages\\",
-      "outputPath": "D:\\Study\\GuoHanwen\\Master\\Info6250\\Assignments\\RollGameApi\\RollGameApi\\obj\\",
+      "outputPath": "D:\\Study\\GuoHanwen\\Master\\DeamonGame\\RollGameApi\\RollGameApi\\obj\\",
       "projectStyle": "PackageReference",
       "fallbackFolders": [
         "C:\\Program Files\\dotnet\\sdk\\NuGetFallbackFolder"
