@@ -4,18 +4,18 @@ import { FormsModule } from '@angular/forms';
 import { HttpClientModule, HttpBackend } from '@angular/common/http';
 import { RouterModule } from '@angular/router';
 import { AppComponent } from './app.component';
-import { NavMenuComponent } from './nav-menu/nav-menu.component';
-import { HomeComponent } from './home/home.component';
-import { PlayerComponentComponent } from './player-component/player-component.component';
 import { HttpModule } from '@angular/http';
 import { DiceService } from './services/diceService';
+import { GameComponent } from './components/game/game.component';
+import { HomeComponent } from './components/home/home.component';
+import { VsGameComponent } from './components/vs-game/vs-game.component';
 
 @NgModule({
   declarations: [
     AppComponent,
-    NavMenuComponent,
+    GameComponent,
     HomeComponent,
-    PlayerComponentComponent
+    VsGameComponent
   ],
   imports: [
     BrowserModule.withServerTransition({ appId: 'ng-cli-universal' }),
@@ -24,6 +24,8 @@ import { DiceService } from './services/diceService';
     HttpModule,
     RouterModule.forRoot([
       { path: '', component: HomeComponent, pathMatch: 'full' },
+      { path: 'storyMode', component: GameComponent },
+      { path: 'vsMode', component: VsGameComponent },
     ])
   ],
   providers: [DiceService],

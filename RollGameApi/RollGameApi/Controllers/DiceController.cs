@@ -24,7 +24,7 @@ namespace RollGameApi.Controllers
         {
             List<int> list = new List<int>();
             Random random = new Random();
-            int count = 3;
+            int count = (int)(random.NextDouble() * 6 + 1);
             for (int i=0; i < count; i++)
             {
                 list.Add((int)(random.NextDouble() * 6 + 1));
