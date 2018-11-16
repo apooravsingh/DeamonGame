@@ -33,7 +33,7 @@ html {
   }
 
   .jumbotron{
-      background-color: gray;
+      background-color: transparent;
       margin-top: 80px;
       margin-left: 30%;
       margin-right: 30%;
@@ -45,13 +45,15 @@ html {
   }
   
   h1 {
+    
     text-align: center;
-    color: black;
+    color: white;
+
   }
   
   h2 {
     text-align: center;
-    color: black;
+    color: white;;
     margin-bottom: 40px;
   }
   
@@ -77,5 +79,18 @@ html {
     transition: background-color 0.3s, color 0.3s;
   }
 
-  
+  .Instructions {
+    color: white;
+    text-align: center;
+  }
+  .Instructions h3{
+    color: white;
+    text-align: start;
+  }
+
+  .Instructions p{
+    color: white;
+    text-align: center;
+    font-style: bold;
+  }
   
